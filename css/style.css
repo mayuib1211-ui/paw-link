@@ -2108,7 +2108,7 @@ footer .footer__middle li:first-of-type {
   margin: 10vh auto;
   background: white;
   border-radius: 16px;
-  border: 10px solid #8CD3B4;
+  border: 8px solid #8CD3B4;
   padding: 2rem;
 }
 
@@ -2118,6 +2118,8 @@ footer .footer__middle li:first-of-type {
 
 .profile {
   text-align: center;
+  color: #8CD3B4;
+  font-size: 3rem;
 }
 
 .label {
@@ -2149,8 +2151,9 @@ footer .footer__middle li:first-of-type {
 }
 
 .cat-modal__name {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 .cat-modal__info {
@@ -2166,6 +2169,31 @@ footer .footer__middle li:first-of-type {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .cat-modal__content {
+    width: 90%;
+    margin: 3vh auto;
+    padding: 1.4rem;
+  }
+  .label {
+    width: 8rem;
+    font-size: 1.2rem;
+  }
+  .cat-modal__info {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .cat-modal__info li {
+    align-items: flex-start;
+    font-size: 1.4rem;
+  }
+  .cat-modal__name {
+    font-size: 1.8rem;
+  }
+  .cat-modal__desc {
+    font-size: 1.4rem;
+  }
+}
 .staff {
   padding-block: 8rem;
 }

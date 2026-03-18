@@ -493,7 +493,7 @@
     margin: 10vh auto;
     background: white;
     border-radius: 16px;
-    border: 10px solid v.$sub-color-g;
+    border: 8px solid v.$sub-color-g;
     padding: 2rem;
 }
 
@@ -503,6 +503,8 @@
 
 .profile {
     text-align: center;
+    color: #8CD3B4;
+    font-size: 3rem;
 }
 
 .label {
@@ -535,8 +537,9 @@
 }
 
 .cat-modal__name {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     text-align: center;
+    font-size: 2rem;
 }
 
 .cat-modal__info {
@@ -551,5 +554,37 @@
 
         margin-bottom: 1rem;
         text-align: center;
+    }
+}
+
+@include m.sp {
+    .cat-modal__content {
+        width: 90%;
+        margin: 3vh auto;
+        padding: 1.4rem;
+    }
+
+    .label {
+        width: 8rem;
+        font-size: 1.2rem;
+    }
+
+
+    .cat-modal__info {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .cat-modal__info li {
+        align-items: flex-start;
+        font-size: 1.4rem;
+    }
+
+    .cat-modal__name {
+        font-size: 1.8rem;
+    }
+
+    .cat-modal__desc {
+        font-size: 1.4rem;
     }
 }
