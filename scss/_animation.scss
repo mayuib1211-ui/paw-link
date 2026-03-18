@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+// ニューススクロールバー
+@keyframes scrollbar {
+    0% {
+        bottom: 170px;
+        opacity: 0.5;
+    }
+
+    40%,
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -10px;
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes wave-sp {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+
+// キャットライナー
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+}
+
+
+@keyframes tilt-wiggle {
+    0% {
+        transform: translateY(10px) rotate(0deg);
+    }
+
+    80% {
+        transform: translateY(10px) rotate(0deg);
+    }
+
+    85% {
+        transform: translateY(10px) rotate(-8deg);
+    }
+
+    92% {
+        transform: translateY(10px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(10px) rotate(0deg);
+    }
+}
+
+
+// フッター
+@keyframes scrollbar-footer {
+    0% {
+        top: -100%;
+        height: 100%;
+    }
+
+    100% {
+        top: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes cat-jump {
+
+    0%,
+    100% {
+        transform: translateY(var(--base-y)) rotate(-7deg);
+    }
+
+    15%,
+    20% {
+        transform: translateY(calc(var(--base-y) - 10px)) rotate(0deg);
+    }
+
+    45% {
+        transform: translateY(var(--base-y)) rotate(7deg);
+    }
+
+    70% {
+        transform: translateY(var(--base-y)) rotate(0deg);
+    }
+}

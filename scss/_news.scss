@@ -1,0 +1,208 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.news {
+    padding-block: 8rem;
+
+    .scroll {
+        position: relative;
+
+        .scroll-text {
+            color: rgb(121, 120, 120);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .scroll-border {
+            position: relative;
+            top: 10px;
+            width: 10px;
+            height: 100px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .scroll-border::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgb(117, 117, 117);
+            margin: auto;
+        }
+
+    }
+
+    .scroll-cat {
+        display: block;
+        width: 15rem;
+        margin-inline: auto;
+        padding-block: 5rem 12rem;
+
+        &:hover {
+            animation: wave 0.5s ease-in-out;
+        }
+
+    }
+
+    .news-list {
+        width: 85%;
+        padding: 3rem 2rem 5rem;
+        background: v.$sub-color-w;
+        border-radius: 15px;
+        margin: 0 auto;
+        font-size: 1.5rem;
+
+        .news-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            width: 85%;
+            gap: 1rem;
+            margin: 0 auto;
+            padding-block: 2rem;
+            background: v.$sub-color-w;
+            border-bottom: 1px solid rgb(206, 206, 206);
+
+        }
+
+        .news-category {
+            display: inline-block;
+            text-align: center;
+            font-size: 1rem;
+            width: 7rem;
+            color: v.$sub-color-w;
+            background: v.$font-main;
+            padding-block: 0.1rem;
+            border-radius: 5px;
+            margin-left: 1rem;
+        }
+
+        .news-text {
+            text-indent: 1rem;
+        }
+    }
+}
+
+.scroll-border::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 0;
+    right: 0;
+    background: #333;
+    border-radius: 50%;
+    animation: scrollbar 3.3s ease-in-out infinite;
+    margin: auto;
+}
+
+
+
+@include m.tab {
+
+    .news {
+
+        .news-list {
+            width: 100%;
+            padding-block: 3rem 4rem;
+
+            .news-link {
+                width: 90%;
+                display: grid;
+                grid-template-columns: auto 1fr; // 日付 / カテゴリ
+                grid-template-rows: auto auto; // 上段 / 下段
+                column-gap: 0.8rem;
+                row-gap: 0.6rem;
+                justify-content: start;
+                padding-block: 1.5rem;
+
+            }
+
+            .news-date {
+                grid-column: 1;
+                grid-row: 1;
+                text-indent: 1rem;
+            }
+
+            .news-category {
+                grid-column: 2;
+                grid-row: 1;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .news-text {
+                grid-column: 1 / -1; // 2列ぶち抜き
+                grid-row: 2;
+
+            }
+        }
+    }
+}
+
+@include m.sp {
+    .news {
+        padding-block: 4rem;
+        padding-inline: 0.8rem;
+
+        .scroll {
+            position: relative;
+
+            .scroll-border {
+                height: 80px;
+            }
+        }
+
+        .scroll-cat {
+            width: 12rem;
+            padding-block: 3rem 8rem;
+            animation: wave-sp 10s ease-in-out infinite;
+        }
+
+
+        .news-list {
+            width: 100%;
+            padding-block: 3rem 4rem;
+            font-size: 1.3rem;
+            // border-radius: 30px;
+
+            .news-link {
+                width: 95%;
+                display: grid;
+                grid-template-columns: auto 1fr; // 日付 / カテゴリ
+                grid-template-rows: auto auto; // 上段 / 下段
+                column-gap: 0.8rem;
+                row-gap: 0.6rem;
+                justify-content: start;
+                padding-block: 1.5rem;
+            }
+
+            .news-date {
+                grid-column: 1;
+                grid-row: 1;
+
+            }
+
+            .news-category {
+                grid-column: 2;
+                grid-row: 1;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .news-text {
+                grid-column: 1 / -1; // 2列ぶち抜き
+                grid-row: 2;
+                text-indent: 0;
+            }
+        }
+    }
+}

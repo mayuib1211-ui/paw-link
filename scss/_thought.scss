@@ -1,0 +1,343 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.thought {
+    padding-block: 10rem;
+
+    .thought__contents {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        padding-top: 8rem;
+
+
+        .thought__figure {
+            position: relative;
+        }
+
+        .thought__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+            font-weight: 500;
+
+            &--second {
+
+                .thought__text {
+                    transform: translateY(-25px);
+                }
+            }
+
+            &--third {
+                margin-top: -5rem;
+
+                .thought__text {
+                    transform: translateY(18px);
+                }
+            }
+
+            &--last {
+                align-items: center;
+            }
+
+            .thought__text {
+                position: relative;
+                flex: 0 1 40rem;
+                font-size: 1.8rem;
+
+                &--last {
+                    display: flex;
+                    align-items: center;
+                    gap: 5rem;
+                    flex: 0 1 50rem;
+                    padding-bottom: 2rem;
+                }
+            }
+
+            .thought__img {
+                width: 28rem;
+
+                &--small {
+                    transform: translateY(-30px);
+                }
+
+                &--large {
+                    width: 29rem;
+                    margin-top: 3rem;
+                    transform: rotate(-10deg);
+                }
+            }
+
+            .thought__illust {
+                width: 135px;
+
+                &--kamakura {
+                    width: 150px;
+                }
+
+                &--hidden {
+                    opacity: 0;
+                }
+
+                &--ramen {
+                    width: 120px;
+                    position: absolute;
+                    transform: rotate(-2deg);
+                    top: 0;
+                    left: -18rem;
+                }
+            }
+
+            .thought__decoration {
+                position: absolute;
+                width: 70px;
+
+                &--cup {
+                    width: 110px;
+                    top: -70px;
+                    left: -225px;
+                    transform: rotate(55deg);
+                    opacity: 0.9;
+                    animation: tilt-wiggle 6s ease-in-out infinite;
+                }
+
+                &--plant {
+                    width: 55px;
+                    top: 28px;
+                    right: -540px;
+                    transform: rotate(15deg);
+                    opacity: 0.9;
+                    animation: tilt-wiggle 7s ease-in-out infinite;
+                }
+
+                // &--humberger {
+                //     width: 120px;
+                //     top: -30px;
+                //     left: -70px;
+                //     transform: rotate(15deg);
+                // }
+
+                &--baloon {
+                    top: -70px;
+                    right: 0;
+                    width: 60px;
+                    opacity: 0.9;
+                    animation: tilt-wiggle 5s ease-in-out infinite;
+                }
+
+                &--mam {
+                    position: static;
+                    width: 100px;
+                    opacity: 0.95;
+                }
+            }
+        }
+    }
+}
+
+@include m.tab {
+
+    .thought {
+        padding-block: 3rem 8rem;
+
+        .thought__contents {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            padding-top: 5rem;
+
+            .thought__item {
+                gap: 3rem;
+
+                .thought__text {
+                    flex: 0 1 40rem;
+                    font-size: 1.6rem;
+                }
+
+                .thought__img {
+                    width: 23rem;
+                }
+
+                .thought__illust {
+
+                    &--kamakura {
+                        width: 120px;
+                    }
+
+                    &--ramen {
+                        width: 120px;
+                        left: -120px;
+                    }
+
+                    &--hidden {
+                        display: none;
+                    }
+                }
+
+                .thought__decoration {
+
+                    &--plant {
+                        top: 10px;
+                        right: -440px;
+                    }
+
+                    &--cup {
+                        width: 110px;
+                        top: -80px;
+                        left: -150px;
+                        transform: rotate(50deg);
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include m.sp {
+
+    .thought {
+        padding-block: 3rem 8rem;
+
+        .thought__contents {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            padding-top: 5rem;
+
+            .thought__item {
+                gap: 2rem;
+
+                .thought__text {
+                    flex: 0 1 40rem;
+                    font-size: 1.6rem;
+                }
+
+                .thought__img {
+                    width: 19rem;
+                }
+
+                .thought__illust {
+
+                    &--kamakura {
+                        display: none;
+                    }
+
+                    &--ramen {
+                        display: none;
+                    }
+
+                    &--hidden {
+                        display: none;
+                    }
+                }
+
+                .thought__decoration {
+
+                    &--plant {
+                        top: 0;
+                        right: -420px;
+                    }
+
+                    &--mam {
+                        display: none;
+                    }
+
+                    &--baloon {
+                        top: -85px;
+                        right: 0;
+                        width: 60px;
+                        opacity: 0.9;
+                    }
+
+                    &--cup {
+                        width: 110px;
+                        top: -95px;
+                        left: -25px;
+                        transform: rotate(10deg);
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:500px) {
+    .thought {
+        padding-block: 3rem 8rem;
+        padding-inline: 1rem;
+
+        .thought__contents {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            padding-top: 5rem;
+
+            .thought__item {
+                gap: 1.5rem;
+
+                &--third {
+                    margin-top: 0;
+
+                    .thought__text {
+                        transform: translateY(0);
+                    }
+                }
+
+                // &--last {
+                //     flex-direction: column-reverse;
+                // }
+
+                .thought__text {
+                    flex: 1;
+                    font-size: 1.5rem;
+                }
+
+                .thought__img {
+                    width: 13rem;
+                }
+
+                .thought__illust {
+
+                    &--kamakura {
+                        display: none;
+                    }
+
+                    &--ramen {
+                        display: none;
+                    }
+
+                    &--hidden {
+                        display: none;
+                    }
+                }
+
+                .thought__decoration {
+
+                    &--plant {
+                        display: none;
+                    }
+
+                    &--mam {
+                        display: none;
+                    }
+
+                    &--baloon {
+                        top: -85px;
+                        right: 0;
+                        width: 50px;
+                        opacity: 0.9;
+                    }
+
+                    &--cup {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

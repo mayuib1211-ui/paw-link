@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+$sp: 767px; // スマホ 〜767px
+$tab: 1110px; // タブレット 768〜1100px
+
+// スマホ（〜767px）
+@mixin sp {
+    @media (max-width: $sp) {
+        @content;
+    }
+}
+
+// sp画面
+@mixin sp-real {
+    @media (max-width: 767px) and (pointer: coarse) {
+        @content;
+    }
+}
+
+// PCだけど画面が細い（ウィンドウ縮小）
+@mixin pc-narrow {
+    @media (max-width: 700px) and (pointer: fine) {
+        @content;
+    }
+}
+
+// タブレット（768px〜1110px）
+@mixin tab {
+    @media (min-width: #{ $sp + 1 }) and (max-width: #{$tab}) {
+        @content;
+    }
+}
+
+// PC（1111px〜）
+@mixin pc {
+    @media (min-width: #{ $tab + 1 }) {
+        @content;
+    }
+}
+

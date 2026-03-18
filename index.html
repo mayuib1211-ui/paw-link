@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paw Link</title>
+    <meta name="description" content="小さな命も大切にできる社会になれるよう、保護活動を行っています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="page-home">
+    <header>
+        <!-- モーフィング用の背景 -->
+        <div class="menu-bg"></div>
+
+        <h1 class="header__logo"><a href="index.html" class="header__logo-link"><img class="header__logo-img"
+                    src="img/common/logo.png" alt="パウリンク会社ロゴ"></a></h1>
+        <!-- <div class="header__nav-inner"> -->
+        <!-- pc用ナビ -->
+        <nav class="header__nav">
+            <div class="header__nav-heading">
+                <img class="header__nav-img" src="img/staff/staff-cat.png" alt="">
+                <p>小さな命と、やさしい未来を。<br>
+                    保護から、家族へつなぐ。</p>
+            </div>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#news">NEWS</a></li>
+                <li class="header__nav-item"><a href="#thought">私たちの想い</a></li>
+                <li class="header__nav-item"><a href="#activities">活動内容</a></li>
+                <li class="header__nav-item"><a href="#adoption">里親募集</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容
+                                <span class="material-symbols-outlined header__nav--arrow">expand_circle_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="adoption-flow.html#faq">よくある質問</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="#staff">スタッフ紹介</a>
+                    <ul class="header__sub-nav">
+                        <!-- リンク後で修正 -->
+                        <li><a href="volunteer.html">ボランティア募集<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <a class="header__nav-contact" href="contact.html">お問合せ</a>
+
+            <button class="menu-btn" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- </div> -->
+        <!-- SPナビ（オーバーレイ専用） -->
+        <nav class="sp-nav">
+            <ul class="sp-nav__list">
+                <li class="sp-nav__item">
+                    <a href="#news"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>NEWS</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="#thought"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>私たちの想い</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="#activities"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>活動内容</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="#adoption"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>里親募集</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="adoption-flow.html#faq"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>よくある質問</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について</a></li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について</a></li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#staff"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>スタッフ紹介</a>
+                    <ul class="sp-nav__sub">
+
+                        <li><a href="volunteer.html#">ボランティア募集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="mainvisual">
+            <div class="hero">
+                <img class="hero-pc" src="img/hero/waveーhero.png" alt="保護猫と家族の写真">
+                <img class="hero-sp" src="img/hero/hero-sp.png" alt="保護猫と家族の写真">
+                <img class="hero-hogoneko" src="img/hero/hero-hogoneko.png" alt="文字ホゴネコ">
+            </div>
+
+            <div class="mv__wrap">
+                <!-- 1枚目 -->
+                <div class="mv__img is-active">
+                    <!-- 左側画像 -->
+                    <div class="mainvisual__left">
+                        <svg viewBox="0 0 627 521" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="family-clip">
+                                    <path
+                                        d="M560.754 394.053 C529.513 436.686 491.272 475.93 441.582 496.7 C391.891 517.47 331.162 520.104 269.621 520.391 C208.079 521.012 145.727 518.952 108.309 492.286 C70.4772 465.619 57.1707 413.675 37.6172 370.057 C18.4767 326.442 -6.49562 290.82 1.54887 259.084 C9.59335 227.348 51.0676 199.501 75.2502 162.846 C99.8478 125.86 107.567 80.0694 137.483 51.1462 C167.815 21.8909 220.344 9.50309 277.79 3.50298 C334.823 -2.49969 396.773 -2.11462 452.834 15.2978 C508.893 33.0449 559.482 67.1527 589.775 110.503 C620.48 154.19 631.304 206.788 624.388 256.264 C617.062 305.403 592.406 351.757 560.754 394.053 Z" />
+                                </clipPath>
+                            </defs>
+                            <image href="img/hero/hero-family.webp" width="100%" height="100%"
+                                clip-path="url(#family-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+
+                    <!-- 右側画像  -->
+                    <div class="mainvisual__right">
+                        <svg viewBox="0 0 787 674" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="baby-clip">
+                                    <path
+                                        d="M205.779 611.855 C140.281 580.585 79.5157 541.572 45.8785 489.158 C12.2413 436.745 5.24771 371.393 1.73306 305.033 C-2.2834 238.69 -2.31902 171.321 35.7915 129.445 C73.8853 87.1238 151.112 69.8163 215.54 46.2447 C279.985 23.1187 332.151 -5.84266 380.144 1.02836 C428.138 7.89939 471.976 51.0484 528.154 75.0457 C584.851 99.4719 653.904 105.192 698.776 135.814 C744.167 166.865 765.377 222.817 777.254 284.436 C789.114 345.609 791.642 412.448 768.341 473.906 C744.538 535.38 695.927 591.884 632.438 627.025 C568.465 662.627 490.134 677.295 415.594 672.65 C341.539 667.544 270.791 643.588 205.779 611.855 Z" />
+                                </clipPath>
+                            </defs>
+
+                            <image href="img/hero/hero-baby.jpg" width="130%" height="100%" x="0" y="0"
+                                clip-path="url(#baby-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- 2枚目 -->
+                <div class="mv__img">
+                    <!-- 左側画像 -->
+                    <div class="mainvisual__left">
+                        <svg viewBox="0 0 627 521" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="family-clip">
+                                    <path
+                                        d="M560.754 394.053 C529.513 436.686 491.272 475.93 441.582 496.7 C391.891 517.47 331.162 520.104 269.621 520.391 C208.079 521.012 145.727 518.952 108.309 492.286 C70.4772 465.619 57.1707 413.675 37.6172 370.057 C18.4767 326.442 -6.49562 290.82 1.54887 259.084 C9.59335 227.348 51.0676 199.501 75.2502 162.846 C99.8478 125.86 107.567 80.0694 137.483 51.1462 C167.815 21.8909 220.344 9.50309 277.79 3.50298 C334.823 -2.49969 396.773 -2.11462 452.834 15.2978 C508.893 33.0449 559.482 67.1527 589.775 110.503 C620.48 154.19 631.304 206.788 624.388 256.264 C617.062 305.403 592.406 351.757 560.754 394.053 Z" />
+                                </clipPath>
+                            </defs>
+                            <image href="img/hero/hero-left2.jpg" width="100%" height="100%"
+                                clip-path="url(#family-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+
+                    <!-- 右側画像  -->
+                    <div class="mainvisual__right">
+                        <svg viewBox="0 0 787 674" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="baby-clip">
+                                    <path
+                                        d="M205.779 611.855 C140.281 580.585 79.5157 541.572 45.8785 489.158 C12.2413 436.745 5.24771 371.393 1.73306 305.033 C-2.2834 238.69 -2.31902 171.321 35.7915 129.445 C73.8853 87.1238 151.112 69.8163 215.54 46.2447 C279.985 23.1187 332.151 -5.84266 380.144 1.02836 C428.138 7.89939 471.976 51.0484 528.154 75.0457 C584.851 99.4719 653.904 105.192 698.776 135.814 C744.167 166.865 765.377 222.817 777.254 284.436 C789.114 345.609 791.642 412.448 768.341 473.906 C744.538 535.38 695.927 591.884 632.438 627.025 C568.465 662.627 490.134 677.295 415.594 672.65 C341.539 667.544 270.791 643.588 205.779 611.855 Z" />
+                                </clipPath>
+                            </defs>
+
+                            <image href="img/hero/hero-right2.jpg" width="130%" height="100%" x="0" y="0"
+                                clip-path="url(#baby-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- 3枚目 -->
+                <div class="mv__img">
+                    <!-- 左側画像 -->
+                    <div class="mainvisual__left">
+                        <svg viewBox="0 0 627 521" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="family-clip">
+                                    <path
+                                        d="M560.754 394.053 C529.513 436.686 491.272 475.93 441.582 496.7 C391.891 517.47 331.162 520.104 269.621 520.391 C208.079 521.012 145.727 518.952 108.309 492.286 C70.4772 465.619 57.1707 413.675 37.6172 370.057 C18.4767 326.442 -6.49562 290.82 1.54887 259.084 C9.59335 227.348 51.0676 199.501 75.2502 162.846 C99.8478 125.86 107.567 80.0694 137.483 51.1462 C167.815 21.8909 220.344 9.50309 277.79 3.50298 C334.823 -2.49969 396.773 -2.11462 452.834 15.2978 C508.893 33.0449 559.482 67.1527 589.775 110.503 C620.48 154.19 631.304 206.788 624.388 256.264 C617.062 305.403 592.406 351.757 560.754 394.053 Z" />
+                                </clipPath>
+                            </defs>
+                            <image href="img/hero/hero-left3.jpg" width="100%" height="100%"
+                                clip-path="url(#family-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+
+                    <!-- 右側画像  -->
+                    <div class="mainvisual__right">
+                        <svg viewBox="0 0 787 674" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <clipPath id="baby-clip">
+                                    <path
+                                        d="M205.779 611.855 C140.281 580.585 79.5157 541.572 45.8785 489.158 C12.2413 436.745 5.24771 371.393 1.73306 305.033 C-2.2834 238.69 -2.31902 171.321 35.7915 129.445 C73.8853 87.1238 151.112 69.8163 215.54 46.2447 C279.985 23.1187 332.151 -5.84266 380.144 1.02836 C428.138 7.89939 471.976 51.0484 528.154 75.0457 C584.851 99.4719 653.904 105.192 698.776 135.814 C744.167 166.865 765.377 222.817 777.254 284.436 C789.114 345.609 791.642 412.448 768.341 473.906 C744.538 535.38 695.927 591.884 632.438 627.025 C568.465 662.627 490.134 677.295 415.594 672.65 C341.539 667.544 270.791 643.588 205.779 611.855 Z" />
+                                </clipPath>
+                            </defs>
+
+                            <image href="img/hero/hero-right3.jpg" width="130%" height="100%" x="0" y="0"
+                                clip-path="url(#baby-clip)" preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news wrapper" id="news">
+            <div class="scroll">
+                <div class="scroll-text">scroll</div>
+                <div class="scroll-border"></div>
+            </div>
+            <img class="scroll-cat" src="img/mission/mission-cat1.webp" alt="" aria-hidden="true">
+
+            <div class="sesection-title-wrapper">
+                <div class="section-title-inner fade-in fade-in">
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                    <h2 class="section-title">News</h2>
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                </div>
+                <h3 class="title-jp fade-in">お知らせ</h3>
+            </div>
+
+            <ul class="news-list fade-in">
+                <li class="news-item">
+                    <a href="#" class="news-link">
+                        <time datetime="2026-01-21" class="news-date">2026.01.21</time>
+                        <span class="news-category">イベント</span>
+                        <p class="news-text">大阪の〇〇にて譲渡会開催が来ました。ぜひいらしてください。</p>
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a href="#" class="news-link">
+                        <time datetime="2025-12-25" class="news-date">2025.12.25</time>
+                        <span class="news-category">譲渡</span>
+                        <p class="news-text">譲渡決定！〇〇ちゃんに、新しい家族が決まりました。</p>
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a href="#" class="news-link">
+                        <time datetime="2025-12-15" class="news-date">2025.12.15</time>
+                        <span class="news-category">ブログ</span>
+                        <p class="news-text">物品の寄付をありがとうございます。ブログを更新しました。</p>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+        <section class="thought wrapper" id="thought">
+            <div class="sesection-title-wrapper">
+                <div class="section-title-inner fade-in">
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                    <h2 class="section-title">Our Story</h2>
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                </div>
+                <h3 class="title-jp fade-in">私たちの想い</h3>
+
+            </div>
+
+            <div class="thought__contents">
+                <div class="thought__item fade-in">
+                    <figure class="thought__figure">
+                        <img class="thought__illust thought__illust--kamakura" src="img/mission/mission-kamakura.png"
+                            alt="猫の家族が暖かく暮らす様子">
+
+                    </figure>
+                    <div class="thought__text">
+                        <p>どんな子にも、あたたかな場所と食事を。</p>
+                        <p>雨や寒さに怯えることなく、安心して眠れる毎日を届けたい。</p>
+                    </div>
+                    <figure class="thought__figure">
+                        <img class="thought__img" src="img/mission/mission-img.webp" alt="屋外で暮らす猫の様子">
+                    </figure>
+                </div>
+
+                <div class="thought__item thought__item--second fade-in">
+                    <figure class="thought__figure">
+                        <img class="thought__img" src="img/mission/mission-img2.webp" alt="屋外で暮らす猫の様子">
+                        <img src="img/mission/mission-plant.png" alt=""
+                            class="thought__decoration thought__decoration--plant" aria-hidden="true">
+                    </figure>
+                    <div class="thought__text">
+                        <p>小さな命にもやさしさを。</p>
+                        <p>生まれた場所に関係なく、すべての命を大切にしたいと私たちは考えています。</p>
+                    </div>
+                </div>
+
+                <div class="thought__item thought__item--third fade-in">
+                    <img class="thought__illust thought__illust--hidden" src="img/mission/mission-kamakura.png"
+                        alt="猫の家族が暖かく暮らす様子">
+
+                    <figure class="thought__figure">
+                        <img src="img/mission/mission-cupanddonut.png" alt=""
+                            class="thought__decoration thought__decoration--cup" aria-hidden="true">
+                        <!-- <img class="thought__decoration thought__decoration--humberger" src="img/mission/mission-humberger.png" alt=""> -->
+                        <img class="thought__illust thought__illust--ramen" src="img/mission/mission-cat2.png"
+                            alt="猫がご飯を食べている様子">
+                    </figure>
+                    <div class="thought__text">
+                        <p>新しい家族と、新しい人生を送る。</p>
+                        <p>出会いがつながり、猫と人
+                            どちらにとっても幸せな未来へ。</p>
+                    </div>
+                    <figure class="thought__figure">
+                        <img class="thought__img thought__img--small" src="img/mission/mission-img3.webp"
+                            alt="子どもと猫が寝てるいる様子">
+                    </figure>
+                </div>
+
+                <div class="thought__item thought__item--last fade-in">
+                    <figure class="thought__figure">
+                        <img class="thought__img thought__img--large" src="img/mission/mission-img4.webp"
+                            alt="スタッフがお世話している様子">
+                    </figure>
+                    <div class="thought__text thought__text--last">
+                        <p>かわいそうな命が生まれない世界を目指して、私たちは今日も
+                            小さな命と向き合っています。
+                            この小さな歩みが、いつか大きな希望へつながるように。
+                        </p>
+                        <img src="img/mission/mission-baloon.png" alt=""
+                            class="thought__decoration thought__decoration--baloon" aria-hidden="true">
+                        <img src="img/mission/mission-cat3.png" alt=""
+                            class="thought__decoration thought__decoration--mam" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="activities" id="activities">
+            <svg class="activities__curve" viewBox="0 0 1920 155" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2868 1054
+         C2868 1636.11 2013.98 2108 960.5 2108
+         C-92.9831 2108 -947 1636.11 -947 1054
+         C-947 471.892 -92.9831 0 960.5 0
+         C2013.98 0 2868 471.892 2868 1054
+         Z" fill="#8cd3b4" fill-opacity="0.75" />
+            </svg>
+
+            <div class="bg-green">
+                <div class=" wrapper-wide">
+
+                    <div class="sesection-title-wrapper">
+                        <div class="section-title-inner">
+                            <img class="paw-icons" src="img/common/paw.svg" alt="">
+                            <h2 class="section-title section-title--white">Activities</h2>
+                            <img class="paw-icons" src="img/common/paw.svg" alt="">
+                        </div>
+
+                    </div>
+
+                    <!-- スクロール量を作る外枠 -->
+                    <div class="activities__scroll wrapper">
+
+                        <div class="activities__inner">
+                            <div class="activities__side">
+                                <div class="activities__side-inner">
+                                    <h3 class="activities__side-title">私たちの活動</h3>
+                                    <p class="activities__side-text">猫たちの未来のために、<br>私たちができること</p>
+                                    <p class="activities__side-text">小さな命を守るための大切な取り組み</p>
+                                    <ul>
+                                        <li>
+                                            <h4>01. 保護</h4>
+                                        </li>
+                                        <li>
+                                            <h4>02. TNR活動</h4>
+                                        </li>
+                                        <li>
+                                            <h4>03. 譲渡</h4>
+                                        </li>
+                                    </ul>
+                                    <img src="img/activities/activities-img1.png" alt="案内している猫のイラスト">
+                                </div>
+                            </div>
+
+
+                            <ul class="activities__main">
+
+                                <li class="activities__card">
+                                    <p class="activities__card-number">01</p>
+                                    <img src="img/activities/activities-img1.webp" alt="安心している猫の様子">
+                                    <div class="activities__card-text">
+                                        <h4 class="activities__card-title">保護<span>Save Life</span></h4>
+                                        <p class="activities__card-description">行き場のない猫や、外で生きることが難しい猫を保護し、
+                                            安全で清潔な環境の中で心と体のケアを行っています。人になれえる練習をしながら、次の家族へ繋げていきます。
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="activities__card">
+                                    <p class="activities__card-number">02</p>
+                                    <img src="img/activities/activities-img2.webp" alt="屋外で暮らす猫の親子の様子">
+                                    <div class="activities__card-text">
+                                        <h4 class="activities__card-title">TNR活動<span>Trap / Neuter /<br
+                                                    class="pc-only">Return</span>
+                                        </h4>
+                                        <p class="activities__card-description">
+                                            これ以上不幸な命を増やさない為に、地域猫の捕獲、不妊去勢手術、元の場所へ戻す
+                                            活動を行い、人と猫が共に安心して暮らせる地域づくりを目指しています。
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="activities__card">
+                                    <p class="activities__card-number">03</p>
+                                    <img src="img/activities/activities-img3.webp" alt="猫を抱っこする家族の様子">
+                                    <div class="activities__card-text">
+                                        <h4 class="activities__card-title">譲渡<span>絆をつなぐ</span></h4>
+                                        <p class="activities__card-description">
+                                            小さな命をあたたかな家族へ。保護した猫たちが、一生大切にしてくれる家族と出会えるよう、譲渡活動を行っています。
+                                            猫と人、どちらにとってお幸せなご縁をつなぎます。
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="adoption-curve">
+            <svg viewBox="0 0 1920 316" xmlns="http://www.w3.org/2000/svg">
+                <!-- ベージュ背景 -->
+                <rect x="-3" y="-78" width="1926" height="394" class="adoption-curve__bg" />
+
+                <!-- グリーンのカーブ -->
+                <path d="
+        M2556 -814
+        C2556 -231.892 1839.88 240 956.5 240
+        C73.1205 240 -643 -231.892 -643 -814
+        C-643 -1396.11 73.1205 -1868 956.5 -1868
+        C1839.88 -1868 2556 -1396.11 2556 -814
+        Z
+      " class="adoption-curve__wave" />
+            </svg>
+        </div>
+
+        <div class="bg-grag">
+
+            <section class="adoption wrapper" id="adoption">
+
+                <div class="sesection-title-wrapper">
+                    <div class="section-title-inner fade-in">
+                        <img class="paw-icons" src="img/common/paw.svg" alt="" aria-hidden="true">
+                        <h2 class="section-title">Adoption</h2>
+                        <img class="paw-icons" src="img/common/paw.svg" alt="" aria-hidden="true">
+                    </div>
+                    <h3 class="title-jp title-jp--adoption fade-in">里親募集</h3>
+                </div>
+
+                <div class="adoption__content fade-in">
+                    <img class="adoption__content-img adoption__content-img--hidden"
+                        src="img/adoption/adoption-cat1.png" alt="" aria-hidden="true">
+                    <div class="adoption__copy">
+                        <h3 class="adoption__intro">新しい家族を保護ねこから</h3>
+                        <p>
+                            私たちは、保護した猫たちが
+                            「ただ引き取られる」のではなく、
+                            家族として、安心して暮らせる場所に
+                            出会えることを大切にしています。
+                        </p>
+                    </div>
+
+                    <img class="adoption__content-img" src="img/adoption/adoption-cat1.png" alt="" aria-hidden="true">
+                </div>
+
+                <ul class="cat__liner">
+                    <li class="cat__card" data-id="ikura">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="konbu">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+
+                        <p class="js-meta"></p>
+                    </li>
+
+                    <li class="cat__card" data-id="nyanta">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="ikura">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="kazunoko">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="kuromame">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+
+                    <li class="cat__card" data-id="ikura">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="konbu">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="nyanta">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="ikura">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="kazunoko">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+                    <li class="cat__card" data-id="kuromame">
+                        <img class="js-img" alt="">
+                        <p class="js-name"></p>
+                        <p class="js-meta"></p>
+                    </li>
+
+                </ul>
+
+                <div class="sesection-title-wrapper">
+                    <div class="section-title-inner fade-in">
+                        <img class="paw-icons" src="img/common/paw-b.png" alt="">
+                        <h2 class="section-title section-title--brown">How to Step</h2>
+                        <img class="paw-icons" src="img/common/paw-b.png" alt="">
+                    </div>
+                    <h3 class="title-jp title-jp--adoption fade-in">里親になるには</h3>
+                </div>
+
+
+                <ol class="adoption__step-outline">
+                    <li class="outline-item fade-in">
+                        <p class="outline-num">STEP<br><span>01</span></p>
+
+                        <div class="circle-bg">
+                            <img src="img/adoption/otoiawase.svg" alt="お問い合わせ">
+                        </div>
+                        <p class="outline-label">お問い合わせ</p>
+                    </li>
+                    <li class="outline-item fade-in">
+                        <p class="outline-num">STEP<br><span>02</span></p>
+
+                        <div class="circle-bg">
+                            <img src="img/adoption/mendan.svg" alt="面談">
+                        </div>
+                        <p class="outline-label">面談</p>
+                    </li>
+                    <li class="outline-item fade-in">
+                        <p class="outline-num">STEP<br><span>03</span></p>
+
+                        <div class="circle-bg">
+                            <img src="img/adoption/trial.svg" alt="トライアル">
+                        </div>
+                        <p class="outline-label">トライアル</p>
+                    </li>
+                    <li class="outline-item fade-in">
+                        <p class="outline-num">STEP<br><span>04</span></p>
+
+                        <div class="circle-bg">
+                            <img src="img/adoption/dicide.svg" alt="決定">
+                        </div>
+                        <p class="outline-label">正式譲渡</p>
+                    </li>
+                </ol>
+                <p class="link-announce">詳細は下記のリンクへ</p>
+
+                <div class="cta-box fade-in">
+                    <img src="img/adoption/adoption-cat2.png" alt="" aria-hidden="true">
+                    <img src="img/adoption/adoption-cat3.png" alt="" aria-hidden="true">
+                    <div class="cta__inner">
+                        <div class="cta__links">
+                            <a href="adoption-flow.html">譲渡に関する詳しい内容
+                                <span class="material-symbols-outlined">outbound</span>
+                            </a>
+                            <a href="adoption-flow.html#faq">よくある質問
+                                <span class="material-symbols-outlined">outbound</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!-- </div> -->
+
+        <section class="staff wrapper" id="staff">
+            <div class="sesection-title-wrapper">
+                <div class="section-title-inner fade-in">
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                    <h2 class="section-title">Our Staff</h2>
+                    <img class="paw-icons" src="img/common/paw.svg" alt="">
+                </div>
+                <h3 class="title-jp fade-in">スタッフの紹介</h3>
+            </div>
+
+            <ul class="staff__list">
+                <li class="staff__card fade-in">
+                    <div class="staff__img">
+                        <img src="img/staff/staff-img1.webp" alt="山田花子さん">
+                    </div>
+                    <p class="stuff-profile">山田 花子</p>
+                    <p class="stuff-profile">スタッフ歴8年</p>
+                    <details class="staff__details">
+                        <summary class="staff__trigger">
+                            <span class="staff-read">Read Message</span>
+                            <span class="staff-action">
+                                <span class="staff-line"></span>
+                                <span class="material-symbols-outlined staff__icon">
+                                    add_circle
+                                </span>
+                            </span>
+                        </summary>
+
+
+                        <div class="staff__message">
+                            <p>
+                                猫一匹一匹の性格に寄り添いながら、
+                                無理のないペースで新しい家族へつなげることを
+                                いつも心がけています。
+                            </p>
+                        </div>
+                    </details>
+                </li>
+
+                <li class="staff__card fade-in">
+                    <div class="staff__img">
+                        <img src="img/staff/staff-img2.jpg" alt="小川流子さん">
+                    </div>
+                    <p class="stuff-profile">小川 流子</p>
+                    <p class="stuff-profile">スタッフ歴3年</p>
+                    <details class="staff__details">
+                        <summary class="staff__trigger">
+                            <span class="staff-read">Read Message</span>
+                            <span class="staff-action">
+                                <span class="staff-line"></span>
+                                <span class="material-symbols-outlined staff__icon">
+                                    add_circle
+                                </span>
+                            </span>
+                        </summary>
+
+                        <div class="staff__message">
+                            <p>
+                                人も猫も安心できる場所であるように、
+                                清潔な環境づくりとあたたかな声かけを
+                                毎日の大切な仕事にしています。
+                            </p>
+                        </div>
+                    </details>
+                </li>
+
+                <li class="staff__card fade-in">
+                    <div class="staff__img is-zoom">
+                        <img src="img/staff/staff-img3.jpg" alt="花壇綺麗さん">
+                    </div>
+                    <p class="stuff-profile">花壇 綺麗</p>
+                    <p class="stuff-profile">スタッフ歴5年</p>
+                    <details class="staff__details">
+                        <summary class="staff__trigger">
+                            <span class="staff-read">Read Message</span>
+                            <span class="staff-action">
+                                <span class="staff-line"></span>
+                                <span class="material-symbols-outlined staff__icon">
+                                    add_circle
+                                </span>
+                            </span>
+                        </summary>
+
+                        <div class="staff__message">
+                            <p>
+                                猫たちが安心して過ごせる居場所を作るため、
+                                日々のお世話を大切にしています。
+                            </p>
+                        </div>
+                    </details>
+                </li>
+            </ul>
+
+
+            <div class="cta-box fade-in">
+                <div class="cta__inner">
+
+                    <div class="cta__links">
+                        <img class="cta__img cta__img--hidden" src="img/staff/staff-cat.png" alt="" aria-hidden="true">
+                        <div class="cta__text">
+                            <p>ボランティアを募集しています</p>
+                            <a href="volunteer.html">詳しくはこちら
+                                <span class="material-symbols-outlined">outbound</span>
+                            </a>
+                        </div>
+                        <img class="cta__img" src="img/staff/staff-cat.png" alt="" aria-hidden="true">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+
+        <svg class="footer__curve" viewBox="0 0 1920 155" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2868 1054
+         C2868 1636.11 2013.98 2108 960.5 2108
+         C-92.9831 2108 -947 1636.11 -947 1054
+         C-947 471.892 -92.9831 0 960.5 0
+         C2013.98 0 2868 471.892 2868 1054
+         Z" fill="white" />
+        </svg>
+        <div class="footer__bg">
+            <div class="footer__top wrapper">
+                <div class="footer__scroll">
+
+                    <div class="footer__scroll-border"></div>
+                </div>
+                <a href="index.html">
+                    <img class="footer__logo" src="img/common/logo.png" alt="パウリンク会社ロゴ">
+                </a>
+
+
+                <div class="info">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10719.06945272448!2d135.4833556547671!3d34.70067209177319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1767679396800!5m2!1sja!2sjp"
+                            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="company-info">
+                        <!-- <div class="company-info-box"> -->
+                        <div class="phone">
+                            <span class="phone-label">代表電話</span>
+                            <span class="phone-number">06-XXXX-XXXX</span>
+                        </div>
+                        <p class="open-time">受付時間 : 9:00-18:00</p>
+                        <p class="place">所在地：大阪府大阪市〇〇〇〇〇〇XX-XX</p>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="footer__middle">
+                    <div class="support">
+                        <h3 class="support-title">ご支援のお願い</h3>
+                        <div class="support-inner">
+                            <img src="img/footer/footer-cat1.png" alt="喜ぶ猫の様子">
+                            <p>皆様のご支援が、小さな命を殺処分から救います。</p>
+                        </div>
+
+                        <a href="#" class="support-link">ご支援はこちら<span
+                                class="material-symbols-outlined">outbound</span></a>
+
+                    </div>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav--list">
+                            <li><a class="footer__nav--link" href="contact.html">お問い合わせ<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                            <li><a class="footer__nav--link" href="adoption-flow.html#faq">よくある質問<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footer__btm">
+
+            <img class="footer__btm-wave" src="img/footer/footer-wabe.svg" alt="" aria-hidden="true">
+            <div class="footer__cat-area">
+                <!-- <img class="footer__btm-cat" src="img/footer/footer-cat2.png" alt="" aria-hidden="true"> 
+                 -->
+                <div class="cat">
+                    <img src="img/footer/footer-cat2.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ にゃー♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat3.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ ありがと♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat4.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ またね♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat5.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ すき♡ /</span>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- 猫モーダル -->
+    <div class="cat-modal" id="catModal" aria-hidden="true">
+        <div class="cat-modal__overlay"></div>
+
+        <div class="cat-modal__content">
+            <button class="cat-modal__close" aria-label="閉じる">×</button>
+
+            <div class="cat-modal__inner">
+                <h2 class="profile">PROFILE</h2>
+                <img class="cat-modal__img" src="" alt="">
+                <div class="cat-modal__text">
+                    <h3 class="cat-modal__name"></h3>
+                    <!-- <p class="cat-modal__meta"></p> -->
+
+                    <ul class="cat-modal__info">
+                        <li class="js-age"></li>
+                        <li class="js-gender"></li>
+                        <li class="js-vaccine"></li>
+                        <li class="js-neutered"></li>
+                        <li class="js-location"></li>
+                    </ul>
+                    <p class="cat-modal__desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/fade.js" defer></script>
+
+</body>
+
+
+</html>

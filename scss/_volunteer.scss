@@ -1,0 +1,306 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.volunteer__mv {
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.9s ease, transform 0.8s ease;
+
+    &.is-show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .volunteer__mv-img {
+        display: block;
+        object-fit: cover;
+        height: 55vh;
+    }
+
+    /* 黒い薄いカバー */
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.30); // ← 濃さはここ調整
+        z-index: 10;
+    }
+
+    /* 文字を上に出す */
+    .volunteer__page-title {
+        position: absolute; // 画像の上に重ねるなら
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        z-index: 20; // ← overlayより上
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .page-title {
+        font-weight: 800;
+        font-size: 12rem;
+        opacity: 0.6;
+    }
+
+    .page-title__jp {
+        padding-bottom: 2rem;
+    }
+}
+
+.volunteer__contents {
+
+    .section-title-box {
+        display: flex;
+        align-items: baseline;
+        gap: 3rem;
+        padding-top: 12rem;
+
+        img {
+            width: 130px;
+            transform: translateY(15px);
+        }
+    }
+
+    .section-title-heading {
+        padding-bottom: 8rem;
+        font-weight: 500;
+    }
+
+    .volunteer__contents-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+
+    }
+
+    .volunteer__contents-card {
+        position: relative;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+        overflow: hidden;
+    }
+
+    .volunteer__card-front {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 250px;
+        background: radial-gradient(circle at center,
+                #FFE8A3 0%,
+                #ffeab2 45%,
+                #FFF6EB 100%);
+
+        &--green {
+            background: radial-gradient(circle at center,
+                    #CDEFD6 0%,
+                    #BEE6C6 45%,
+                    #F1FAF3 100%);
+        }
+
+        .volunteer__card-title {
+            position: relative;
+            margin: 2rem 0 0 2rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+
+            &::before {
+                content: "ー";
+                position: absolute;
+                top: -2rem;
+                color: #8B6F5A;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #8d725e98;
+        }
+
+    }
+
+    .volunteer__card-back {
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+
+        .volunteer__card-image {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.38); // ← 濃さはここ調整
+                z-index: 10;
+                border-radius: 8px;
+            }
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 11 / 9;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+            width: 50%;
+            color: #fff;
+            z-index: 30;
+        }
+
+
+    }
+
+    .volunteer__contents-card:hover .volunteer__card-back {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .volunteer__contents-card.is-open .volunteer__card-back {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+}
+
+
+.volunteer__cta {
+    padding-block: 12rem;
+
+    .volunteer__cta-heading {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 2rem;
+    }
+
+    img {
+        width: 60px;
+
+    }
+
+    .volunteer__cta-box {
+        background: v.$sub-color-g;
+        text-align: center;
+
+        .volunteer__cta-text {
+            padding-block: 8rem 4rem;
+            font-weight: 500;
+        }
+
+        .volunteer__cta-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding-bottom: 8rem;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 320px;
+            background: v.$sub-color-w;
+            padding-block: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0 rgba(139, 111, 90, 0.35);
+            transition: transform 0.2s, box-shadow 0.1s;
+
+            &:hover {
+                box-shadow: 1px 3px 0 rgba(139, 111, 90, 0.35);
+                transform: translateY(1px);
+            }
+
+            &:active {
+                box-shadow: 2px 3px 0 rgba(139, 111, 90, 0.35);
+                transform: translateY(2px);
+            }
+
+        }
+
+        .material-symbols-outlined {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include m.tab {
+
+    .volunteer__mv {
+
+        .page-title {
+            font-size: 8rem;
+        }
+    }
+}
+
+@include m.sp {
+
+    .volunteer__mv {
+
+        .page-title {
+            font-size: 6rem;
+        }
+
+        .page-title__jp {
+            padding-bottom: 2rem;
+        }
+
+        p {
+            width: 90%;
+        }
+    }
+
+    .volunteer__contents {
+
+        .section-title-box {
+            padding-top: 5rem;
+
+            img {
+                width: 110px;
+            }
+        }
+    }
+
+    .volunteer__cta {
+
+        .volunteer__cta-box {
+
+            .volunteer__cta-item {
+
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,281 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.staff {
+    padding-block: 8rem;
+
+    .staff__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem;
+        margin: 0 auto;
+
+        .staff__card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 24rem;
+            overflow: visible;
+            padding: 1rem;
+            background-color: v.$sub-color-w;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+            border-radius: 10px;
+            align-self: flex-start;
+        }
+
+        .stuff-profile {
+            text-align: left;
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+
+        .staff__img {
+            aspect-ratio: 11 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        .is-zoom img {
+            transform: scale(1.2);
+            transform-origin: center top;
+        }
+
+        details {
+
+            summary {
+                list-style: none;
+                all: unset;
+                display: block;
+            }
+
+            summary::-webkit-details-marker {
+                display: none;
+            }
+
+            .staff__trigger {
+                position: relative;
+                display: block;
+                gap: 1em;
+                width: 100%;
+                margin-block: 3rem 1rem;
+                color: gray;
+                cursor: pointer;
+            }
+
+            .staff-read {
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+                white-space: nowrap;
+                padding-right: 14rem;
+            }
+
+            .staff-action {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+
+            .staff-line {
+                width: 10rem;
+                height: 1.1px;
+                background: rgb(160, 160, 160);
+                flex-shrink: 0;
+            }
+
+            .staff__icon {
+                font-size: 1.8rem;
+                color: rgb(126, 125, 125);
+                flex-shrink: 0;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                transition: transform 0.3s ease;
+            }
+
+            .staff__message {
+                font-size: 1.4rem;
+                line-height: 1.7;
+                border-radius: 5px;
+                margin: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &[open] {
+                .staff__icon {
+                    transform: rotate(45deg);
+                }
+
+                .staff__message {
+                    margin-block: 2rem 1rem;
+                    padding: 1.5rem 1rem;
+                    max-height: 500px;
+                    opacity: 1;
+                    background: rgb(247, 247, 247);
+                }
+            }
+        }
+    }
+
+
+    .cta-box {
+        padding-block: 12rem 6rem;
+        text-align: center;
+        margin: 0 auto;
+
+        .cta__img {
+            width: 23%;
+            transform: translateY(-5px);
+
+            &--hidden {
+                visibility: hidden;
+            }
+        }
+
+        .cta__inner {
+
+            width: 70%;
+            background: v.$sub-color-gg;
+
+            padding-block: 0.3rem;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        .cta__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            width: 99%;
+            padding: 2rem 6rem;
+            margin: 0 auto;
+            background: v.$sub-color-gg;
+            border: 3px solid white;
+            border-radius: 13px;
+
+            p {
+                font-size: 1.6rem;
+                font-weight: 600;
+                padding-bottom: 2rem;
+
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                gap: 1rem;
+                width: 30rem;
+                padding-block: 0.5rem;
+                font-weight: 600;
+                background: v.$sub-color-w;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 1.4rem;
+                box-shadow: 0px 5px 12px #CAD4E2, 3px 3px 3px #FFF;
+                border: 3px solid white;
+                transition: transform 0.1s ease;
+
+                .material-symbols-outlined {
+                    font-size: 2rem;
+                    opacity: 0.9;
+                    // color: v.$sub-color-g;;
+                }
+
+                &:hover {
+                    transform: translateY(2px); 
+                    box-shadow: 0 0 4px #CAD4E2, 0px 0px 5px #FFF;
+                }
+
+                &:active {
+                    transform: translateY(1px); // 押し込まれる感じ
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+                }
+            }
+        }
+    }
+}
+
+@include m.tab {
+    .staff {
+        .cta-box {
+
+            .cta__img {
+                width: 23%;
+            }
+
+            .cta__inner {
+                width: 90%;
+            }
+
+            .cta__links {
+
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@include m.sp {
+
+    .staff {
+
+        .cta-box {
+            padding-block: 8rem 5rem;
+            position: relative;
+
+            .cta__img {
+                position: absolute;
+                top: 4vw;
+                right: 0;
+                min-width: 110px;
+            }
+
+            .cta__inner {
+                width: 100%;
+            }
+
+            .cta__links {
+
+                p {
+                    font-size: 1.4rem;
+                }
+
+                a {
+                    width: 25rem;
+                    padding-block: 0.2rem;
+                    font-size: 1.2rem;
+
+                    .material-symbols-outlined {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

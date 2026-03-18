@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paw Link</title>
+    <meta name="description" content="小さな命も大切にできる社会になれるよう、保護活動を行っています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ヘッダーインデックスができたら再度追加して譲渡と質問の箇所だけリンク修正する -->
+    <header class="header__adoption-flow">
+        <!-- モーフィング用の背景 -->
+        <div class="menu-bg"></div>
+
+        <h1 class="header__logo"><a href="index.html" class="header__logo-link"><img class="header__logo-img"
+                    src="img/common/logo.png" alt="パウリンク会社ロゴ"></a></h1>
+        <!-- <div class="header__nav-inner"> -->
+        <!-- pc用ナビ -->
+        <nav class="header__nav">
+            <div class="header__nav-heading">
+                <img class="header__nav-img" src="img/staff/staff-cat.png" alt="">
+                <p>小さな命と、やさしい未来を。<br>
+                    保護から、家族へつなぐ。</p>
+            </div>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html#news">NEWS</a></li>
+                <li class="header__nav-item"><a href="index.html#thought">私たちの想い</a></li>
+                <li class="header__nav-item"><a href="index.html#activities">活動内容</a></li>
+                <li class="header__nav-item"><a href="index.html#adoption">里親募集</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容
+                                <span class="material-symbols-outlined header__nav--arrow">expand_circle_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="adoption-flow.html#faq">よくある質問</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="index.html#staff">スタッフ紹介</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="volunteer.html">ボランティア募集<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <a class="header__nav-contact" href="contact.html">お問合せ</a>
+
+            <button class="menu-btn" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- </div> -->
+        <!-- SPナビ（オーバーレイ専用） -->
+        <nav class="sp-nav">
+            <ul class="sp-nav__list">
+                <li class="sp-nav__item">
+                    <a href="index.html#news"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>NEWS</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#thought"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>私たちの想い</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#activities"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>活動内容</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#adoption"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>里親募集</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="#faq"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>よくある質問</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について</a></li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について</a></li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#staff"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>スタッフ紹介</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="volunteer.html">ボランティア募集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="adoption__flow wrapper" id="adoption__flow">
+
+            <div class="adoption__flow-inner">
+                <h2 class="section-title section-title--vertical">Adoption Flow</h2>
+
+                <h3 class="section-title section-title--sub">譲渡までの流れ</h3>
+                <p class="adoption__flow-heading">安心できるステップを設け、譲渡まで丁寧にサポートいたします。</p>
+
+                <ol class="adoption__flow-list">
+                    <li class="adoption__flow-item">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">01</span>
+                            <span class="text">受付・アンケート</span>
+                        </h3>
+                        <p class="adoption__flow-text">会場にて、まずアンケートをご記入いただきます。
+                            猫ちゃんが安心して暮らせる環境かどうかを大切に考えるため、
+                            家族構成や住環境、猫との暮らしについてお伺いします。
+                            不明点があれば、その場でスタッフがご説明します。
+                        </p>
+                    </li>
+                    <li class="adoption__flow-item is-reverse">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">02</span>
+                            <span class="text">猫と出会う</span>
+                        </h3>
+
+                        <p class="adoption__flow-text">会場で気になる猫ちゃんと実際に触れ合っていただきます。
+                            性格やしぐさ、ほかの猫との関係性などを見ながら、
+                            ご自身の生活に合うかどうかを、ゆっくり感じてみてください。
+                        </p>
+                    </li>
+                    <li class="adoption__flow-item">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">03</span>
+                            <span class="text">保護主とお話</span>
+                        </h3>
+
+                        <p class="adoption__flow-text">猫ちゃんのこれまでの生活や性格、健康状態について、
+                            保護主から直接お話を聞いていただきます。
+                            不安なことや分からないことは、遠慮なくご相談ください。
+                        </p>
+                    </li>
+                    <li class="adoption__flow-item is-reverse">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">04</span>
+                            <span class="text">お申込み</span>
+                        </h3>
+
+                        <p class="adoption__flow-text">「この子を迎えたい」と思われた場合、里親申込書をご記入いただきます。
+                            猫ちゃんと里親さま、双方が安心して暮らせるご縁となるよう、
+                            内容を確認しながら譲渡の可否を検討します。
+                        </p>
+                    </li>
+                    <li class="adoption__flow-item">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">05</span>
+                            <span class="text">トライアル</span>
+                        </h3>
+
+                        <p class="adoption__flow-text">一定期間、猫ちゃんを実際にご自宅で迎えて生活していただきます。
+                            猫ちゃんが新しい環境に慣れるか、ご家族が無理なくお世話できるかを
+                            確認する大切な期間です。
+                            期間中は、様子を共有しながらサポートします。
+                        </p>
+                    </li>
+                    <li class="adoption__flow-item is-reverse">
+                        <h3 class="adoption__flow-title">
+                            <span class="num">06</span>
+                            <span class="text">正式譲渡</span>
+                        </h3>
+
+                        <p class="adoption__flow-text">トライアル終了後、問題がなければ正式譲渡となります。
+                            譲渡契約を結び、猫ちゃんは新しい家族の一員として新しい生活をスタートします。
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+
+            <svg class="faq__curve" viewBox="0 0 1920 155" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2868 1054
+         C2868 1636.11 2013.98 2108 960.5 2108
+         C-92.9831 2108 -947 1636.11 -947 1054
+         C-947 471.892 -92.9831 0 960.5 0
+         C2013.98 0 2868 471.892 2868 1054
+         Z" fill="white" />
+            </svg>
+            <div class="faq__bg">
+
+                <div class="faq__curve-inner">
+                    <div class="sesection-title-wrapper">
+                        <div class="section-title-inner">
+                            <img class="paw-icons" src="img/common/paw.svg" alt="">
+                            <h2 class="section-title"> F<span class="and">&amp;</span>Q</h2>
+                            <img class="paw-icons" src="img/common/paw.svg" alt="">
+                        </div>
+                        <h3 class="title-jp">よくある質問</h3>
+                    </div>
+
+
+                    <div class="faq__inner">
+                        <div class="faq__intro">
+                            <p class="faq__intro-title">\ 気になることは？ /</p>
+                            <img class="faq__intro-decoration" src="img/qa/qa-cat.png" alt="" aria-hidden="true">
+                        </div>
+
+                        <nav class="faq__index" aria-label="FAQカテゴリ">
+                            <ul class="faq__index-list">
+                                <li class="faq__index-item">
+                                    <h4 class="faq__index-title">
+                                        <a class="faq__index-link" href="#faq-adoption">里親募集について
+                                            <span class="material-symbols-outlined">outbound</span>
+                                        </a>
+                                    </h4>
+                                </li>
+                                <li class="faq__index-item">
+                                    <h4 class="faq__index-title">
+                                        <a class="faq__index-link" href="#faq-health">猫の健康・性格について
+                                            <span class="material-symbols-outlined">outbound</span>
+                                        </a>
+                                    </h4>
+                                </li>
+                                <li class="faq__index-item">
+                                    <h4 class="faq__index-title">
+                                        <a class="faq__index-link" href="#faq-volunteer">ボランティア・支援について
+                                            <span class="material-symbols-outlined">outbound</span>
+                                        </a>
+                                    </h4>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <img src="img/qa/qa-bg2.svg" alt="" aria-hidden="true">
+
+
+
+            <!-- FAQ: 里親募集 -->
+            <div class="wrapper">
+                <section class="faq__category" id="faq-adoption">
+
+                    <div class="faq__category-head">
+                        <h4 class="section-title section-title--sub">里親募集について</h4>
+                        <img class="faq__decoration" src="img/qa/qa-pc.png" alt="" aria-hidden="true">
+                    </div>
+                    <ul class="faq__list">
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 保護猫とはどんな猫ですか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>さまざまな事情で行き場を失った猫たちです。安全な環境で保護し、
+                                    新しい家族を探しています。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 初めて猫を飼いますが大丈夫ですか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>はい。飼育方法や性格に合わせたアドバイスを行っていますので、
+                                    初めての方も安心してご相談ください。スタッフがサポートをさせて頂きます。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 子どもがいても里親になれますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>猫の性格によっては可能です。ご家庭の状況を伺いながら、相性を大切にしています。
+                                    相性判断のためのトライアル期間もあり、猫ちゃんの年齢や性格によって異なりますが、
+                                    １週間～となります。その子の性格や行動、健康状態等を含めてしっかりと考えて
+                                    頂くための期間であり、先住猫ちゃんがいるご家庭ではお互いの相性を試して
+                                    頂く期間でもあります。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. トライアルとはなんですか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>実際に一緒に暮らしてみて、猫とご家族の相性を確認する期間です。
+                                    もしトライアル中に不安が出たらいつでもご相談ください。
+                                    無理に譲渡を進めることはありません。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 譲渡には審査基準があるのでしょうか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>ペットショップではございませんので、譲渡には審査がございます。保護猫団体により審査基準は異なりますことを御留意くださいませ。
+                                    ご迎えた猫も家族も全員が幸せになれるかどうかを慎重に判断するための基準となるので
+                                    理解の程よろしくお願いいたします。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 一人暮らしでも譲渡してもらえますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>お留守番時間など条件はありますが、可能な場合もあります。まずはご相談ください。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 高齢ですが里親になれますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>猫の将来を考慮し、サポート体制などを含めてご相談のうえ判断しています。
+                                    ご状況などをお伺いしているので、まずは相談ください。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- FAQ: 猫の健康・性格について -->
+                <section class="faq__category" id="faq-health">
+                    <div class="faq__category-head">
+                        <h4 class="section-title section-title--sub">
+                            猫の健康・性格について
+                        </h4>
+                        <img class="faq__decoration" src="img/qa/qa-book.png" alt="" aria-hidden="true">
+                    </div>
+
+                    <ul class="faq__list">
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. ワクチンや去勢・避妊手術はしていますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>年齢や体調に応じて、必要な医療ケアを行っています。
+                                    気になる子がいる場合は、お問い合わせください。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 病気や障がいのある猫もいますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>はい。個性として受け入れてくださるご家族を探しています。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 性格は事前に分かりますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>保護中の様子から、できる限り詳しくお伝えします。ただし、トライアル中などは
+                                    緊張により普段の様子と違う場合がございますので、ご理解いただけますと幸いです。
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- FAQ: ボランティア・支援について -->
+                <section class="faq__category" id="faq-volunteer">
+                    <div class="faq__category-head">
+                        <h4 class="section-title section-title--sub">
+                            ボランティア・支援について
+                        </h4>
+                        <img class="faq__decoration" src="img/qa/qa-paw.png" alt="" aria-hidden="true">
+                    </div>
+
+                    <ul class="faq__list">
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. ボランティアは未経験でも大丈夫ですか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>はい。できることからお願いしています。
+                                    気になることがありましたら、お気軽にご相談ください。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 短時間でも参加できますか？</button>
+                            <div class="faq__answer" hidden>
+                                <p>可能です。無理のない形でご協力ください。</p>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <button class="faq__question" aria-expanded="false">Q. 物資の寄付はできますか？</button>
+                            <div class="faq__answer">
+                                <p>フードや消耗品など、受け付けています（詳細は別ページへ）。</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="faq-volunteer-cta">
+                        <img class="faq__cta-decoration" src="img/qa/qa-cat2.png" alt="">
+                        <a class="volunteer-cta-link" href="volunteer.html">ボランティア内容はこちら
+                            <span class="material-symbols-outlined">outbound</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+
+        <svg class="footer__curve" viewBox="0 0 1920 155" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2868 1054
+         C2868 1636.11 2013.98 2108 960.5 2108
+         C-92.9831 2108 -947 1636.11 -947 1054
+         C-947 471.892 -92.9831 0 960.5 0
+         C2013.98 0 2868 471.892 2868 1054
+         Z" fill="white" />
+        </svg>
+        <div class="footer__bg">
+            <div class="footer__top wrapper">
+                <div class="footer__scroll">
+
+                    <div class="footer__scroll-border"></div>
+                </div>
+                <a href="index.html">
+                    <img class="footer__logo" src="img/common/logo.png" alt="パウリンク会社ロゴ">
+                </a>
+
+
+                <div class="info">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10719.06945272448!2d135.4833556547671!3d34.70067209177319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1767679396800!5m2!1sja!2sjp"
+                            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="company-info">
+                        <!-- <div class="company-info-box"> -->
+                        <div class="phone">
+                            <span class="phone-label">代表電話</span>
+                            <span class="phone-number">06-XXXX-XXXX</span>
+                        </div>
+                        <p class="open-time">受付時間 : 9:00-18:00</p>
+                        <p class="place">所在地：大阪府大阪市〇〇〇〇〇〇XX-XX</p>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="footer__middle">
+                    <div class="support">
+                        <h3 class="support-title">ご支援のお願い</h3>
+                        <div class="support-inner">
+                            <img src="img/footer/footer-cat1.png" alt="喜ぶ猫の様子">
+                            <p>皆様のご支援が、小さな命を殺処分から救います。</p>
+                        </div>
+
+                        <a href="#" class="support-link">ご支援はこちら<span
+                                class="material-symbols-outlined">outbound</span></a>
+
+                    </div>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav--list">
+                            <li><a class="footer__nav--link" href="contact.html">お問い合わせ<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                            <li><a class="footer__nav--link" href="adoption-flow.html#faq">よくある質問<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footer__btm">
+
+            <img class="footer__btm-wave" src="img/footer/footer-wabe.svg" alt="" aria-hidden="true">
+            <div class="footer__cat-area">
+                <!-- <img class="footer__btm-cat" src="img/footer/footer-cat2.png" alt="" aria-hidden="true"> 
+                 -->
+                <div class="cat">
+                    <img src="img/footer/footer-cat2.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ にゃー♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat3.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ ありがと♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat4.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ またね♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat5.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ すき♡ /</span>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- 猫モーダル -->
+    <div class="cat-modal" id="catModal" aria-hidden="true">
+        <div class="cat-modal__overlay"></div>
+
+        <div class="cat-modal__content">
+            <button class="cat-modal__close" aria-label="閉じる">×</button>
+
+            <div class="cat-modal__inner">
+                <img class="cat-modal__img" src="" alt="">
+                <div class="cat-modal__text">
+                    <h3 class="cat-modal__name"></h3>
+                    <p class="cat-modal__meta"></p>
+                    <p class="cat-modal__desc"></p>
+                    <ul class="cat-modal__info">
+                        <li class="js-vaccine"></li>
+                        <li class="js-neutered"></li>
+                        <li class="js-location"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/fade.js" defer></script>
+
+</body>
+
+
+</html>

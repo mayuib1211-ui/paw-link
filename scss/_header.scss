@@ -1,0 +1,508 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.header__contact,
+.header__adoption-flow,
+.header__volunteer {
+    background: v.$header-bg-color;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: v.$font-heading;
+
+
+    .header__nav {
+        position: relative;
+        z-index: 900; // 背景より上
+    }
+
+    .header__nav-heading {
+        display: none;
+    }
+
+    .header__logo,
+    .header__nav-contact,
+    .menu-btn {
+        position: relative;
+        z-index: 800; // 
+    }
+
+    .header__logo {
+        padding-left: 4rem;
+        line-height: 0;
+
+        .header__logo-link {
+            display: block;
+        }
+
+        .header__logo-img {
+            width: 20rem;
+        }
+    }
+
+
+    .header__nav {
+        margin-left: auto;
+    }
+
+    .header__nav-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        color: v.$header-font-color;
+        font-weight: 500;
+        margin-right: 26rem;
+
+        .header__nav-item {
+            position: relative;
+
+            >a {
+                position: relative;
+                display: inline-block;
+                padding: 6px 2px;
+                transition: transform 0.3s ease;
+                color: v.$header-font-color;
+            }
+
+            &>a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: v.$header-font-color;
+                border-radius: 50px;
+                opacity: 0;
+                transform: translateY(-2px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            &:hover>a {
+                transform: translateY(2px);
+            }
+
+            &:hover>a::after {
+                opacity: 0.5;
+                transform: translateY(0);
+            }
+
+            .header__sub-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 30rem;
+                background: #fdfbfb;
+                border-radius: 30px;
+                padding: 3rem 0 1.5rem 3rem;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                font-size: 1.4rem;
+                font-weight: normal;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-2px);
+                transition: all 0.3s ease;
+
+                li {
+                    padding-bottom: 1.5rem;
+
+                    >a {
+                        display: flex;
+                        align-items: center;
+                        color: v.$header-font-color;
+                        font-weight: 500;
+                    }
+
+                    .header__nav--arrow {
+                        font-size: 1.8rem;
+                        margin-left: 0.6rem;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &:hover .header__sub-nav {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(5px);
+            }
+        }
+    }
+
+    .header__actions {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        z-index: 900;
+        position: fixed;
+        top: 1.6rem;
+        right: 1rem;
+
+        .header__nav-contact {
+            padding: 0.3rem 2rem;
+            margin-left: 1.8rem;
+            border-radius: 50px;
+            background: v.$accent-color;
+            color: white;
+            display: inline-block;
+            transition: all 0.2s;
+
+            &:hover {
+                background: v.$sub-color-w;
+                color: v.$accent-color;
+                border: 1px solid v.$accent-color;
+            }
+        }
+
+        .menu-btn {
+            z-index: 2000;
+            width: 4.5rem;
+            height: 4.5rem;
+            border: 2px solid v.$accent-color;
+            border-radius: 50%;
+            color: v.$accent-color;
+            margin: 0 4rem 0 2rem;
+            background: transparent;
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            span {
+                display: block;
+                width: 2rem;
+                height: 2px;
+                background-color: v.$accent-color;
+                border-radius: 999px;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            /* ------メニューボタンクリック時------ */
+            &.is-open {
+                span:nth-child(1) {
+                    transform: translateY(7px) rotate(45deg);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: translateY(-7px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .sp-nav {
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    // }
+
+    //------モーフィング風下記にオープン時の記載あり------ 
+    .menu-bg {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    //------モーフィング風時の下の赤ちゃん写真------ 
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100vh;
+        inset: 0;
+        background-image: url("../img/hero/hero-baby.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0; // ← 初期は見えない
+        pointer-events: none;
+    }
+
+    .header__contact::before,
+    .header__adoption-flow::before {
+        display: none;
+    }
+}
+
+
+/* ------スクロール時------ */
+
+header.is-scrolled {
+
+    .header__nav {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .header__nav-contact,
+    .menu-btn {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* ------ヘッダーis-open時------ */
+header.is-open {
+    position: fixed;
+    inset: 0;
+    pointer-events: auto;
+    z-index: 100;
+
+
+    .is-open .sp-nav,
+    .is-open .menu-btn,
+    .is-open .header__nav,
+    .is-open .header__sub-nav a,
+    .is-open .header__nav-contact,
+    .is-open .header__logo {
+        pointer-events: auto;
+        /* 👈 クリック可能にする */
+    }
+
+    // 背景赤ちゃん画像
+    &::before {
+        opacity: 0.23;
+        z-index: 11;
+    }
+
+    .menu-bg {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        overflow: hidden;
+        pointer-events: none;
+        background-color: #f7eeee;
+    }
+
+}
+
+/* -------------------------
+レスポンシブ
+----------------------------*/
+
+/* PC用：モーフィング時のナビ */
+@include m.pc {
+
+    header {
+        .sp-nav {
+            display: none;
+            border: 1px solid red;
+        }
+    }
+
+    header.is-open {
+
+        .header__nav {
+            position: absolute;
+            top: 15rem;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            max-width: 700px;
+            pointer-events: auto;
+            font-size: 1.8rem;
+            z-index: 20;
+            margin: 0 auto;
+
+            .header__nav-item {
+
+                a {
+                    text-shadow: 0 1px 4px rgba(255, 190, 137, 0.445);
+                }
+            }
+        }
+
+        .header__nav-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            p {
+                padding-top: 2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                opacity: 0.8;
+            }
+        }
+
+        .header__nav-img {
+            display: block;
+            width: 150px;
+            margin-bottom: 2rem;
+            opacity: 0.75;
+        }
+
+        .header__nav-list {
+            max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 7rem 8rem;
+            margin: 0 auto;
+            gap: 3rem 1rem;
+            background-color: rgba(247, 238, 238, 0.767);
+            border-radius: 24px;
+            border: 2px solid #a16d4bea;
+            text-align: center;
+        }
+    }
+}
+
+@include m.tab {
+
+    header {
+        position: relative;
+
+        .header__nav {
+            display: none;
+        }
+
+        .sp-nav {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .header__actions {
+            .menu-btn {
+                margin: 0 1rem 0 1rem;
+            }
+        }
+
+        &.is-nav-open {
+
+            .sp-nav {
+                opacity: 1;
+                pointer-events: auto;
+                position: fixed;
+                top: 10rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 100;
+                padding: 8rem 5rem;
+                background-color: rgba(247, 238, 238, 0.767);
+                border-radius: 24px;
+                border: 2px solid #a16d4bea;
+
+                .sp-nav__item {
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: v.$header-font-color;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                    }
+
+                    .material-symbols-outlined {
+                        font-size: 3.8rem;
+                    }
+
+                    .sp-nav__sub {
+                        text-indent: 3.6rem;
+
+                        li:last-child {
+                            padding-bottom: 1rem;
+                        }
+
+                        a {
+                            display: block;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include m.sp {
+
+    header {
+
+        .header__logo {
+            padding-left: 1rem;
+
+            .header__logo-img {
+                width: 14rem;
+            }
+        }
+
+        .sp-nav {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        .header__actions {
+            .menu-btn {
+                width: 3.8rem;
+                height: 3.8rem;
+                margin: 0 1rem 0 1rem;
+            }
+        }
+
+        &.is-nav-open {
+
+            .sp-nav {
+                opacity: 1;
+                pointer-events: auto;
+                position: fixed;
+                top: 10rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 100;
+                min-width: 320px;
+                padding: 5rem;
+                background-color: rgba(247, 238, 238, 0.767);
+                border-radius: 24px;
+                border: 2px solid #a16d4bea;
+
+                .sp-nav__item {
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: v.$header-font-color;
+                        font-weight: 500;
+                    }
+
+                    .sp-nav__sub {
+                        text-indent: 2.3rem;
+
+                        li:last-child {
+                            padding-bottom: 1rem;
+                        }
+
+                        a {
+                            display: block;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

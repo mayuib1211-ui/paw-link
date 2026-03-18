@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paw Link</title>
+    <meta name="description" content="小さな命も大切にできる社会になれるよう、保護活動を行っています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="page-contact">
+
+    <!-- ヘッダーインデックスができたら再度追加して譲渡と質問の箇所だけリンク修正する -->
+    <header class="header__contact">
+        <!-- モーフィング用の背景 -->
+        <div class="menu-bg"></div>
+
+        <h1 class="header__logo"><a href="index.html" class="header__logo-link"><img class="header__logo-img"
+                    src="img/common/logo.png" alt="パウリンク会社ロゴ"></a></h1>
+        <!-- <div class="header__nav-inner"> -->
+        <!-- pc用ナビ -->
+        <nav class="header__nav">
+            <div class="header__nav-heading">
+                <a href="index.html"><img class="header__nav-img" src="img/staff/staff-cat.png" alt=""></a>
+                <p>小さな命と、やさしい未来を。<br>
+                    保護から、家族へつなぐ。</p>
+            </div>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html#news">NEWS</a></li>
+                <li class="header__nav-item"><a href="index.html#thought">私たちの想い</a></li>
+                <li class="header__nav-item"><a href="index.html#activities">活動内容</a></li>
+                <li class="header__nav-item"><a href="index.html#adoption">里親募集</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容
+                                <span class="material-symbols-outlined header__nav--arrow">expand_circle_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="adoption-flow.html#faq">よくある質問</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="index.html#staff">スタッフ紹介</a>
+                    <ul class="header__sub-nav">
+                        <li><a href="volunteer.html">ボランティア募集<span
+                                    class="material-symbols-outlined header__nav--arrow">expand_circle_right</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <a class="header__nav-contact" href="contact.html">お問合せ</a>
+
+            <button class="menu-btn" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- </div> -->
+        <!-- SPナビ（オーバーレイ専用） -->
+        <nav class="sp-nav">
+            <ul class="sp-nav__list">
+                <li class="sp-nav__item">
+                    <a href="index.html#news"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>NEWS</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#thought"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>私たちの想い</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#activities"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>活動内容</a>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#adoption"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>里親募集</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html">譲渡に関する詳しい内容</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="adoption-flow.html#faq"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>よくある質問</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="adoption-flow.html#faq-adoption">里親募集について</a></li>
+                        <li><a href="adoption-flow.html#faq-health">猫の健康・性格について</a></li>
+                        <li><a href="adoption-flow.html#faq-volunteer">ボランティア・支援について</a></li>
+                    </ul>
+                </li>
+
+                <li class="sp-nav__item">
+                    <a href="index.html#staff"><span class="material-symbols-outlined">
+                            arrow_right
+                        </span>スタッフ紹介</a>
+                    <ul class="sp-nav__sub">
+                        <li><a href="volunteer.html">ボランティア募集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact wrapper" id="contact">
+
+            <div class="sesection-title-wrapper">
+                <div class="section-title-inner">
+                    <img class="paw-icons" src="img/common/paw-orang.svg" alt="">
+                    <h2 class="section-title section-title--orange">Contact</h2>
+                    <img class="paw-icons" src="img/common/paw-orang.svg" alt="">
+                </div>
+                <h3 class="title-jp">お問い合わせ</h3>
+            </div>
+
+            <div class="contact__box">
+                <form action="" method="post" class="contact__card">
+                    <dl>
+                        <dt><label for="user-name">お名前<span>必須</span></label></dt>
+                        <dd><input type="text" id="user-name" name="user-name" required placeholder="例：山田 太郎"></dd>
+                        <dt><label for="e-mail">メールアドレス<span>必須</span></label></dt>
+                        <dd><input type="email" id="e-mail" name="e-mail" required placeholder="otoiawase@XXXX.com">
+                        </dd>
+                        <dt><label for="textarea">お問い合わせ内容<span>必須</span></label></dt>
+                        <dd><textarea name="message" id="textarea" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                        </dd>
+                    </dl>
+
+                    <div class="contact__btn">
+                        <button type="submit" class="submit__btn">送信する</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </section>
+    </main>
+
+
+    <footer class="fade-in">
+
+        <svg class="footer__curve" viewBox="0 0 1920 155" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2868 1054
+         C2868 1636.11 2013.98 2108 960.5 2108
+         C-92.9831 2108 -947 1636.11 -947 1054
+         C-947 471.892 -92.9831 0 960.5 0
+         C2013.98 0 2868 471.892 2868 1054
+         Z" fill="white" />
+        </svg>
+        <div class="footer__bg">
+            <div class="footer__top wrapper">
+                <div class="footer__scroll">
+
+                    <div class="footer__scroll-border"></div>
+                </div>
+                <a href="index.html">
+                    <img class="footer__logo" src="img/common/logo.png" alt="パウリンク会社ロゴ">
+                </a>
+
+
+                <div class="info">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10719.06945272448!2d135.4833556547671!3d34.70067209177319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1767679396800!5m2!1sja!2sjp"
+                            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="company-info">
+                        <!-- <div class="company-info-box"> -->
+                        <div class="phone">
+                            <span class="phone-label">代表電話</span>
+                            <span class="phone-number">06-XXXX-XXXX</span>
+                        </div>
+                        <p class="open-time">受付時間 : 9:00-18:00</p>
+                        <p class="place">所在地：大阪府大阪市〇〇〇〇〇〇XX-XX</p>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="footer__middle">
+                    <div class="support">
+                        <h3 class="support-title">ご支援のお願い</h3>
+                        <div class="support-inner">
+                            <img src="img/footer/footer-cat1.png" alt="喜ぶ猫の様子">
+                            <p>皆様のご支援が、小さな命を殺処分から救います。</p>
+                        </div>
+
+                        <a href="#" class="support-link">ご支援はこちら<span
+                                class="material-symbols-outlined">outbound</span></a>
+
+                    </div>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav--list">
+                            <li><a class="footer__nav--link" href="contact.html">お問い合わせ<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                            <li><a class="footer__nav--link" href="adoption-flow.html#faq">よくある質問<span
+                                        class="material-symbols-outlined">outbound</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footer__btm">
+
+            <img class="footer__btm-wave" src="img/footer/footer-wabe.svg" alt="" aria-hidden="true">
+            <div class="footer__cat-area">
+                <!-- <img class="footer__btm-cat" src="img/footer/footer-cat2.png" alt="" aria-hidden="true"> 
+                 -->
+                <div class="cat">
+                    <img src="img/footer/footer-cat2.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ にゃー♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat3.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ ありがと♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat4.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ またね♡ /</span>
+                </div>
+
+                <div class="cat">
+                    <img src="img/footer/footer-cat5.png" alt="" aria-hidden="true">
+                    <span class="cat-word">\ すき♡ /</span>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- 猫モーダル -->
+    <div class="cat-modal" id="catModal" aria-hidden="true">
+        <div class="cat-modal__overlay"></div>
+
+        <div class="cat-modal__content">
+            <button class="cat-modal__close" aria-label="閉じる">×</button>
+
+            <div class="cat-modal__inner">
+                <img class="cat-modal__img" src="" alt="">
+                <div class="cat-modal__text">
+                    <h3 class="cat-modal__name"></h3>
+                    <p class="cat-modal__meta"></p>
+                    <p class="cat-modal__desc"></p>
+                    <ul class="cat-modal__info">
+                        <li class="js-vaccine"></li>
+                        <li class="js-neutered"></li>
+                        <li class="js-location"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/fade.js" defer></script>
+
+</body>
+
+
+</html>
