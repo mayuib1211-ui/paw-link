@@ -355,9 +355,18 @@
             padding: 3rem;
         }
 
-        .adoption__intro {
-            font-size: 1.6rem;
+        .adoption__copy {
+
+            .adoption__intro {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
         }
+
+
 
         p {
             font-size: 1.3rem;

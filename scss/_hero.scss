@@ -11,7 +11,7 @@
     transform: translateY(8px);
     transition: opacity 1s ease, transform 0.6s ease;
     min-height: calc(100svh - 8rem);
-   
+
 
     &.is-show {
         opacity: 1;
@@ -47,7 +47,7 @@
     .mv__wrap {
         position: absolute;
         inset: 0;
-        
+
     }
 
     .mv__img {
@@ -155,15 +155,20 @@
             display: none;
         }
 
+        .hero-hogoneko {
+            margin-top: 0; //様子みる
+        }
+
+
         .mainvisual__left {
             width: 60%;
-            top: 20vw;
+            top: 25vw;
             left: 3vw;
         }
 
         .mainvisual__right {
             width: 55%;
-            top: 40vw;
+            top: 45vw;
             transform: translateY(50%);
             right: 3vw;
         }

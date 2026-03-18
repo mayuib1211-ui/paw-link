@@ -1030,14 +1030,17 @@ footer .footer__middle li:first-of-type {
   .mainvisual .hero-pc {
     display: none;
   }
+  .mainvisual .hero-hogoneko {
+    margin-top: 0;
+  }
   .mainvisual .mainvisual__left {
     width: 60%;
-    top: 20vw;
+    top: 25vw;
     left: 3vw;
   }
   .mainvisual .mainvisual__right {
     width: 55%;
-    top: 40vw;
+    top: 45vw;
     transform: translateY(50%);
     right: 3vw;
   }
@@ -1166,7 +1169,7 @@ footer .footer__middle li:first-of-type {
 }
 @media (max-width: 767px) {
   .news {
-    padding-block: 4rem;
+    padding-block: 0 4rem;
     padding-inline: 0.8rem;
   }
   .news .scroll {
@@ -1607,7 +1610,7 @@ footer .footer__middle li:first-of-type {
     padding-block: 3rem 1.5rem;
   }
   .activities .activities__inner .activities__side-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .activities .activities__inner .activities__side img {
     width: 30%;
@@ -1700,7 +1703,7 @@ footer .footer__middle li:first-of-type {
     aspect-ratio: 1/1.3;
   }
   .activities .activities__inner .activities__main .activities__card img {
-    width: 50%;
+    width: 60%;
     margin-bottom: 1.5rem;
   }
   .activities .activities__inner .activities__main .activities__card-text {
@@ -1999,8 +2002,11 @@ footer .footer__middle li:first-of-type {
     width: 100%;
     padding: 3rem;
   }
-  .adoption .adoption__intro {
-    font-size: 1.6rem;
+  .adoption .adoption__copy .adoption__intro {
+    font-size: 1.5rem;
+  }
+  .adoption .adoption__copy p {
+    font-size: 1.4rem;
   }
   .adoption p {
     font-size: 1.3rem;
