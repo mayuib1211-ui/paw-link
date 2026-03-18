@@ -130,6 +130,8 @@
 @include m.tab {
 
     .mainvisual {
+        min-height: auto;
+        padding-bottom: 4rem;
 
         .mainvisual__left {
             top: 9rem;
@@ -144,11 +146,14 @@
 @include m.sp {
 
     .mainvisual {
+        min-height: auto;
+        padding-bottom: 4rem;
 
         .hero-sp {
             display: block;
-            height: auto;
+            // height: 60%;
             margin: 0 auto;
+            width: 120%;
         }
 
         .hero-pc {
@@ -156,21 +161,21 @@
         }
 
         .hero-hogoneko {
-            margin-top: 0; //様子みる
+            margin-top: 3rem; //様子みる
         }
 
 
         .mainvisual__left {
-            width: 60%;
+            width: 70%;
             top: 25vw;
-            left: 3vw;
+            left: 1vw;
         }
 
         .mainvisual__right {
-            width: 55%;
-            top: 45vw;
+            width: 65%;
+            top: 53vw;
             transform: translateY(50%);
-            right: 3vw;
+            right: 1vw;
         }
     }
 }

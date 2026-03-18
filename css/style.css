@@ -1014,6 +1014,10 @@ footer .footer__middle li:first-of-type {
   }
 }
 @media (min-width: 768px) and (max-width: 1110px) {
+  .mainvisual {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
   .mainvisual .mainvisual__left {
     top: 9rem;
   }
@@ -1022,27 +1026,31 @@ footer .footer__middle li:first-of-type {
   }
 }
 @media (max-width: 767px) {
+  .mainvisual {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
   .mainvisual .hero-sp {
     display: block;
-    height: auto;
     margin: 0 auto;
+    width: 120%;
   }
   .mainvisual .hero-pc {
     display: none;
   }
   .mainvisual .hero-hogoneko {
-    margin-top: 0;
+    margin-top: 3rem;
   }
   .mainvisual .mainvisual__left {
-    width: 60%;
+    width: 70%;
     top: 25vw;
-    left: 3vw;
+    left: 1vw;
   }
   .mainvisual .mainvisual__right {
-    width: 55%;
-    top: 45vw;
+    width: 65%;
+    top: 53vw;
     transform: translateY(50%);
-    right: 3vw;
+    right: 1vw;
   }
 }
 .news {
