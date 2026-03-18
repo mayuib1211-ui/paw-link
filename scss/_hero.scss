@@ -37,11 +37,12 @@
     }
 
     .hero-hogoneko {
-        width: clamp(70%, 80vw, 85%);
+        // width: clamp(83%, 80vw, 85%);
+        width: 85%;
         display: block;
         object-fit: cover;
         margin: 0 auto;
-        margin-top: -2rem; //様子みる
+        margin-top: -2rem; 
     }
 
     .mv__wrap {

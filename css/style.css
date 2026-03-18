@@ -934,7 +934,7 @@ footer .footer__middle li:first-of-type {
      object-fit: contain;
 }
 .mainvisual .hero-hogoneko {
-  width: clamp(70%, 80vw, 85%);
+  width: 85%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1184,7 +1184,7 @@ footer .footer__middle li:first-of-type {
     position: relative;
   }
   .news .scroll .scroll-border {
-    height: 80px;
+    height: 60px;
   }
   .news .scroll-cat {
     width: 12rem;
