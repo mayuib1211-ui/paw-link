@@ -1024,6 +1024,10 @@ footer .footer__middle li:first-of-type {
   .mainvisual .mainvisual__right {
     top: 6rem;
   }
+  .mainvisual .hero-hogoneko {
+    width: 95%;
+    margin-top: 3rem;
+  }
 }
 @media (max-width: 767px) {
   .mainvisual {
@@ -1145,6 +1149,12 @@ footer .footer__middle li:first-of-type {
 }
 
 @media (min-width: 768px) and (max-width: 1110px) {
+  .news .scroll {
+    position: relative;
+  }
+  .news .scroll .scroll-border {
+    height: 60px;
+  }
   .news .news-list {
     width: 100%;
     padding-block: 3rem 4rem;

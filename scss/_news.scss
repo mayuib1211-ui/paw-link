@@ -110,6 +110,14 @@
 
     .news {
 
+        .scroll {
+            position: relative;
+
+            .scroll-border {
+                height: 60px;
+            }
+        }
+
         .news-list {
             width: 100%;
             padding-block: 3rem 4rem;
