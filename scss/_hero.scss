@@ -152,13 +152,14 @@
 @include m.sp {
 
     .mainvisual {
+        overflow: hidden;
         min-height: auto;
         padding-bottom: 4rem;
 
         .hero-sp {
             display: block;
             margin: 0 auto;
-            width: 120%;
+            transform: scale(1.5);
         }
 
         .hero-pc {
@@ -167,7 +168,7 @@
 
         .hero-hogoneko {
             width: 95%;
-            margin-top: 3rem; //様子みる
+            margin-top: 10rem; //様子みる
         }
 
 

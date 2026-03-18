@@ -1031,20 +1031,21 @@ footer .footer__middle li:first-of-type {
 }
 @media (max-width: 767px) {
   .mainvisual {
+    overflow: hidden;
     min-height: auto;
     padding-bottom: 4rem;
   }
   .mainvisual .hero-sp {
     display: block;
     margin: 0 auto;
-    width: 120%;
+    transform: scale(1.5);
   }
   .mainvisual .hero-pc {
     display: none;
   }
   .mainvisual .hero-hogoneko {
     width: 95%;
-    margin-top: 3rem;
+    margin-top: 10rem;
   }
   .mainvisual .mainvisual__left {
     width: 70%;
