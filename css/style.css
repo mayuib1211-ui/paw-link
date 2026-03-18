@@ -1039,6 +1039,7 @@ footer .footer__middle li:first-of-type {
     display: none;
   }
   .mainvisual .hero-hogoneko {
+    width: 95%;
     margin-top: 3rem;
   }
   .mainvisual .mainvisual__left {
